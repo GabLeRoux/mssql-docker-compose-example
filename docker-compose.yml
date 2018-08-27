@@ -1,0 +1,11 @@
+version: '2'
+services:
+  db:
+    image: microsoft/mssql-server-linux:2017-CU7
+    container_name: beep-boop-boop
+    volumes:
+      - .:/app
+    ports:
+      - 1443:1443
+    env_file:
+      - .env
